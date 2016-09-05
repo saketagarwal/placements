@@ -1,31 +1,26 @@
 import java.util.Scanner;
 
-public class ReverseString {
-	
+public class ReverseStringEachWord {
+
 	public static void main(String[] args) {
-		
+
 		Scanner s = new Scanner(System.in);
-		
+
 		System.out.println("Enter a string : ");
-		
-	
-		String input = s.nextLine();
-		
-		
-	
+
+		String[] input = s.nextLine().split(" ");
 		StringBuilder sb = new StringBuilder();
 		
-		
-		for(int i = input.length()-1 ; i >=0 ; i--)
+		for(int i=0 ;  i<input.length ; i++)
 		{
-		
-		//System.out.print(input.charAt(i));
-			sb.append(input.charAt(i));
-		
+			for(int j =input[i].length()-1; j>=0;j--)
+			{
+				sb.append(input[i].charAt(j));
+			}
+			sb.append(" ");
 		}
 		String output = sb.toString();
 		System.out.println(output);
-		
-	}
 
+	}
 }
