@@ -1,5 +1,5 @@
 
-public class recursion1 {
+public class Factorial {
 	public static void main(String[] args) {
 		int p =fact(5);
 		System.out.println(p);
