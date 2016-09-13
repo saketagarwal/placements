@@ -8,7 +8,8 @@ public class ReverseStringEachWord {
 
 		System.out.println("Enter a string : ");
 
-		String[] input = s.nextLine().split(" ");
+		String[] input = s.nextLine().split("\\s+");
+		// \\s+ for any number of white spaces it will consider it as one white space
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i=0 ;  i<input.length ; i++)
